@@ -1,6 +1,6 @@
 import Config from '../config';
 export default{
- 	url: Config.api + '/item',
+ 	url: Config.api + '/category',
  	fetch(v){
  		return v.$http.get(this.url);
  	},

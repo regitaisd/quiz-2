@@ -4,15 +4,11 @@
 			<div class="container">
 				<div class="navbar-header">
 					<router-link to="/" class="navbar-brand">Home</router-link>
+					<router-link to="/category" class="navbar-brand">Category</router-link>
 					<router-link to="/item" class="navbar-brand">Items</router-link>
 					<router-link to="/login" class="navbar-brand">Login</router-link>
 					<router-link to="/register" class="navbar-brand">Register</router-link>
 				</div>
-				<!--<ul class="nav navbar-nav navbar-right">
-					<li>
-						<router-link to="/item">Items</router-link>
-					</li>
-				</ul>-->
 			</div>
 		</nav>
 		<main>

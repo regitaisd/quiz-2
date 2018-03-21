@@ -7,6 +7,13 @@ import LoadingPanel from '../commons/loading-pannel/loading-panel.common.vue';
 import ErrorPanel  from '../commons/error-pannel/error-pannel.common.vue';
 import Toast from '../commons/toast/toast.common.vue';
 
+import Vue from 'vue';
+import Router from 'vue-router';
+import Resource from 'vue-resource';
+
+Vue.use(Router);
+Vue.use(Resource);
+
 export default {
 	components: {
 		'loading-panel': LoadingPanel,
@@ -15,8 +22,8 @@ export default {
 	},
 	data() {
 		return {
-			message: 'Add New Item',
-			description: 'Add new items',
+			message: 'Items',
+			description: 'CRUD items',
 			itemConfig: {
 				loading: true,
 				error: false

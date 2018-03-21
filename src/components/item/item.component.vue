@@ -38,10 +38,10 @@
       <thead>
        <tr>
         <th class="text-center" style="width: 20%">#ID</th>
-              <th class="text-center" style="width: 20%">Category ID</th>
-              <th class="text-center" style="width: 20%">Name</th>
-              <th class="text-center" style="width: 20%">Stock</th>
-              <th class="text-center" style="width: 20%">Price</th>
+        <th class="text-center" style="width: 20%">Category ID</th>
+        <th class="text-center" style="width: 20%">Name</th>
+        <th class="text-center" style="width: 20%">Stock</th>
+        <th class="text-center" style="width: 20%">Price</th>
        </tr>
       </thead>
       <tbody>
@@ -64,7 +64,8 @@
          <input type="text" class="form-control" v-model="item.price" v-if="item.onedit" placeholder="Price">
         </td>
         <td>
-        <button type="button" class="btn btn-sm btn-danger" @click="editItem(item)">Edit</button>
+        <button type="button" class="btn btn-sm btn-success" v-if="!item.onedit" @click="editItem(item)">Edit</button>
+        <button type="button" class="btn btn-sm btn-success" v-if ="item.onedit":disabled= "item.stock == '' || item.price ==''" @click="updateItem(item)">Update</button>
         <button type="button" class="btn btn-sm btn-danger" @click="deleteItem(item)">Delete</button>
         </td>
        </tr>
