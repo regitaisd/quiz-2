@@ -63,7 +63,9 @@
          <span v-if="!item.onedit">{{ item.price }}</span>
          <input type="text" class="form-control" v-model="item.price" v-if="item.onedit" placeholder="Price">
         </td>
-         <button type="button" class="btn btn-sm btn-danger" @click="deleteItem(item)">Delete</button>
+        <td>
+        <button type="button" class="btn btn-sm btn-danger" @click="editItem(item)">Edit</button>
+        <button type="button" class="btn btn-sm btn-danger" @click="deleteItem(item)">Delete</button>
         </td>
        </tr>
       </tbody>
